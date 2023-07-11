@@ -1,0 +1,83 @@
+.navbar{
+    height: 10vh;
+    background-color: red;
+    padding: 1vh;
+    justify-content: center;
+}
+.container-fluid{
+    padding: 5vh;
+    position: relative;
+    background-color: gold;
+}
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.list-group{
+    width: 100%;
+    padding: 5vh;
+    overflow-y: scroll;   
+}
+.list-group::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.btn-user {
+    background-color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: red;
+}  
+.btn-signout {
+    background-color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: red;
+    float: right;
+} 
+igx-calendar{
+    border-radius: 0 25px 25px 0;
+}
+.calenderdiv{
+    border-radius: 25px 0 0 25px;
+    border: dashed white;
+    border-right: none;
+    color: red;
+    font-weight: bold;
+    width: 15%;
+    overflow: hidden;
+}
+#historytxt{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 5vh;
+}
+.btn-gotofop{
+    width: 100%;
+    font-size: larger;
+    background-color: whitesmoke;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: red;
+}
+i{
+    margin: 0 10px;
+}
+.rangebtn,.multibtn{
+    width: 100%;
+    border: none;
+    transition: height 2s;
+    font-weight: bold;
+}
+.multibtn{
+    height: 70%;
+    color: white;
+    background-color: red;
+}
+.rangebtn{
+    height: 30%;
+}
+
+
+

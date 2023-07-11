@@ -1,0 +1,74 @@
+<div class="modal-header" >
+    <h5 class="modal-title" id="exampleModalLabel" style="font-weight: bolder;">{{food.name.toUpperCase()}}</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+</div>
+<div class="modal-body">
+    <h6 style="font-weight: bold;">{{food.description}}</h6>
+    <br>
+    <div class="form-check form-check-inline">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="inlineCheckbox1"
+          value="monday"
+          [(ngModel)]="checkboxValues.monday"
+        />
+        <label class="form-check-label" for="inlineCheckbox1">Monday<br>07/10/2023</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="inlineCheckbox2"
+          value="tuesday"
+          [(ngModel)]="checkboxValues.tuesday"
+        />
+        <label class="form-check-label" for="inlineCheckbox2">Tuesday<br>07/11/2023</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="inlineCheckbox2"
+          value="wednesday"
+          [(ngModel)]="checkboxValues.wednesday"
+        />
+        <label class="form-check-label" for="inlineCheckbox2">Wednesday<br>07/12/2023</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="inlineCheckbox2"
+          value="thursday"
+          [(ngModel)]="checkboxValues.thursday"
+        />
+        <label class="form-check-label" for="inlineCheckbox2">Thursday<br>07/13/2023</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          mdbCheckbox
+          class="form-check-input"
+          type="checkbox"
+          id="inlineCheckbox2"
+          value="friday"
+          [(ngModel)]="checkboxValues.friday"
+        />
+        <label class="form-check-label" for="inlineCheckbox2">Friday<br>07/14/2023</label>
+      </div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" (click)="modalRef.close()">
+    Close
+</button>
+<button type="button" class="btn btn-primary" (click)="onOrderSubmit()">Confirm Order</button>
+</div>

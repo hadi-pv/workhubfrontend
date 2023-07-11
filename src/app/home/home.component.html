@@ -1,0 +1,50 @@
+<div class="body">
+    <nav class="navbar">
+       <div class="row" style="width: 100vw;">
+            <div class="col-md-3">
+                <button class="btn btn-user" mdbRipple (click)="openModal()" ><i class="fas fa-user-alt"></i>User</button>
+            </div>
+            <div class="col-md-6">
+                 <button class="btn btn-danger btn-gotofop" routerLink="/order">
+                    <i class="fas fa-hamburger"></i><i class="fas fa-fish"></i><i class="fas fa-egg"></i><i class="fas fa-cloud-meatball"></i>
+                    Go to ordering page
+                    <i class="fas fa-seedling"></i><i class="fas fa-carrot"></i><i class="fas fa-ice-cream"></i><i class="fas fa-apple-alt"></i>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-danger btn-signout" mdbRipple (click)="authService.SignOut()" >Log Out</button>
+            </div>
+        </div>
+      </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container">
+                    <ol class="list-group list-group-numbered">
+                        <h4 id="historytxt">Order history</h4>
+                        <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let order of duporderarray">
+                          <div class="ms-2 me-auto">
+                            <div class="fw-bold">{{order.name}}</div>
+                            {{order.date}}
+                          </div>
+                          <span [class]="order.ftype=='veg'? 'badge badge-success rounded-pill' : 'badge badge-danger rounded-pill'">{{order.ftype}}</span>
+                        </li>
+                      </ol>
+                </div>                
+            </div>
+            <div class="col-md-6">
+                <div class="container" style="padding: 1vh;">
+                    <div class="calenderdiv">
+                        <button #multi class="multibtn selectedoption" (click)="onmulticlick()">Multi Selection</button>
+                        <button #range class="rangebtn" (click)="onrangeclick()">Range Selection</button>
+                    </div>
+                    <!-- app.component.html -->
+                    <igx-calendar #calendar header-background='black'
+                    [selection]="coption"
+                    (selected)="onSelection($event)">
+                    </igx-calendar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="body">
+  <nav class="navbar">
+    <div class="row" style="width: 100vw;">
+         <div class="col-md-3">
+             <button class="btn btn-user" mdbRipple (click)="openModal2()" ><i class="fas fa-user-alt"></i>User</button>
+         </div>
+         <div class="col-md-6">
+              <button class="btn btn-danger btn-gotofop" routerLink="/home">
+                 <i class="fas fa-hamburger"></i><i class="fas fa-fish"></i><i class="fas fa-egg"></i><i class="fas fa-cloud-meatball"></i>
+                 Go to History page
+                 <i class="fas fa-seedling"></i><i class="fas fa-carrot"></i><i class="fas fa-ice-cream"></i><i class="fas fa-apple-alt"></i>
+             </button>
+         </div>
+         <div class="col-md-3">
+             <button class="btn btn-danger btn-signout" mdbRipple (click)="authService.SignOut()" >Log Out</button>
+         </div>
+     </div>
+   </nav>
+   <br>
+    <div class="container-fluid">
+        <div class="row foodheading">
+            <span>ORDER FOOD</span>
+        </div>
+        <div class="row foodlistrow">
+            <div class="row row-cols-1 row-cols-md-5 g-2">
+                <div class="col" *ngFor="let food of slides">
+                  <div class="card">
+                    <img [src]="food.ftype === 'veg' ? '/assets/veg.jpg' : '/assets/nonveg.jpg'" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                    <div class="card-body">
+                      <button disabled [class]="food.ftype=='veg'? 'btn btn-success' : 'btn btn-danger'" style="float: right;">{{food.ftype}}</button><br>
+                      <h5 class="card-title" style="margin-top: 0;">{{food.name}}</h5>
+                      <blockquote>{{food.description}}</blockquote>
+                      <button class="btn btn-danger foodcardbtn" (click)="openModal(food)">
+                        Order
+                        <i class="fas fa-expand-arrows-alt fa-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.body{
+    height: 100vh;
+    background-color: gold;
+}
+
+.foodlistrow{
+    height: 70vh;
+    overflow-y: scroll;
+}
+.foodcardbtn{
+    background-color: gold;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight: bold;
+}
+.foodheading{
+    height: 10vh;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 50px;
+    color: red;
+    font-weight: bold;
+    letter-spacing: 1vh;
+    font-family: cursive;
+    font-size: 50px;
+}
+i{
+    color: red;
+    margin-left: 3px;
+}
+.btn-user {
+    background-color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: red;
+}  
+.btn-signout {
+    background-color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: red;
+    float: right;
+} 
+.navbar{
+    height: 10vh;
+    background-color: red;
+    padding: 1vh;
+    justify-content: center;
+}
+.btn-gotofop{
+    width: 100%;
+    font-size: larger;
+    background-color: whitesmoke;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: red;
+}
+.fas{
+    margin: 0 10px;
+}
